@@ -12,7 +12,7 @@ import thunkMiddleware from 'redux-thunk';
 import 'tachyons';
 import './index.css';
 
-const logger = createLogger(); //for logging into application
+const logger = createLogger(); //for logging/debugging application
 const rootReducer = combineReducers({ searchRobots, requestRobots });
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
 
