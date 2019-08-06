@@ -14,7 +14,7 @@ import './index.css';
 
 const logger = createLogger(); //for logging/debugging application
 const rootReducer = combineReducers({ searchRobots, requestRobots });
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger));
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware /*, logger*/));
 
 ReactDOM.render(
     <Provider store={store}>
