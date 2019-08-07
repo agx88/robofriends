@@ -19,7 +19,7 @@ class CounterButton extends Component {
 
     updateCount = () => {
         this.setState(state => {
-            return { count: state.count + 1 };
+            return { count: state.count + 1  };
         });
     }
 
