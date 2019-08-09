@@ -24,7 +24,6 @@ class CounterButton extends Component {
     }
 
     render() {
-        console.log('CounterButton');
         return (
             <button 
             id='counter'
