@@ -11,6 +11,8 @@
   ],
   "dependencies": {
     "gh-pages": "^2.1.1",
+    "husky": "^3.0.4",
+    "pretty-quick": "^1.11.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^5.0.7",
@@ -26,7 +28,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pre-commit": "pretty-quick --staged"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
