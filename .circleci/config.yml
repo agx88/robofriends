@@ -6,7 +6,7 @@
       steps:
         - checkout # check out the code in the project directory
         - run: echo "hello world" # run the `echo` command
-    sally:
+    jimmy:
       docker: 
         - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
       steps:
@@ -14,7 +14,7 @@
         - run: echo "double trouble" # run the `echo` command
   workflows:
     version: 2
-    bobby_sally:
+    bobby_jimmy:
       jobs:
         - bobby
-        - sally
+        - jimmy
