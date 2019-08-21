@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import MainPage from './MainPage';
-import { isMainThread } from 'worker_threads';
 
 let wrapper;
 beforeEach(() => {
@@ -30,7 +29,7 @@ it('filters robots correctly', () => {
         isPending: false
     }
     const wrapper2 = shallow(<MainPage {...mockProps2} />);
-    expect(wrapper2.instance().filterRobots()).toEqual([{
+    expect(wrapper2.instance().filterRobots(mockProps2.robots)).toEqual([{
         id: 3,
         name: 'John',
         email: 'john@gmail.com'
@@ -50,7 +49,7 @@ it('filters robots correctly 2', () => {
     }
     const filteredRobots = [];
     const wrapper3 = shallow(<MainPage {...mockProps3} />);
-    expect(wrapper3.instance().filterRobots()).toEqual(filteredRobots);
+    expect(wrapper3.instance().filterRobots(mockProps3.robots)).toEqual(filteredRobots);
 })
 
 it('testing pending', () => {
@@ -66,5 +65,5 @@ it('testing pending', () => {
     }
     const filteredRobots = [];
     const wrapper4 = shallow(<MainPage {...mockProps4} />);
-    expect(wrapper4.instance().filterRobots()).toEqual(filteredRobots);
+    expect(wrapper4.instance().filterRobots(mockProps4.robots)).toEqual(filteredRobots);
 })
